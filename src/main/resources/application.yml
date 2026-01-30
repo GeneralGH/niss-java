@@ -1,0 +1,21 @@
+spring:
+  messages:
+    # 国际化资源文件路径
+    basename: i18n/messages
+  profiles:
+    active: dev
+    #测试环境|test  开发环境|dev  正式环境|prod
+  mvc:
+    pathmatch:
+      #解决高版本springboot与swagger不兼容问题
+      matching-strategy: ant_path_matcher
+
+# token配置
+token:
+  # 令牌自定义标识
+  header: Authorization
+  # 令牌密钥
+  secret: abcdefghijklmnopqrstuvwxyz
+  # 令牌有效期（默认30分钟）
+  expireTime: 30
+

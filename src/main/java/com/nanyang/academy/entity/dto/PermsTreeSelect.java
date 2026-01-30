@@ -1,0 +1,56 @@
+package com.nanyang.academy.entity.dto;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.nanyang.academy.entity.SysMenu;
+import lombok.Data;
+
+import java.io.Serializable;
+import java.util.List;
+import java.util.stream.Collectors;
+
+/**
+ * @ClassName pt
+ * @Description TODO
+ * @Author pt
+ * @Date 2022/7/20
+ * @Version 1.0
+ **/
+@Data
+public class PermsTreeSelect implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+    /** 节点ID */
+    private Long key;
+
+    /** 节点名称 */
+    private String title;
+
+    private String icon;
+
+    private String url;
+
+    private String component;
+
+    /** 菜单权限标识 */
+    private String perms;
+
+    /** 子节点 */
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    private List<PermsTreeSelect> children;
+
+    public PermsTreeSelect()
+    {
+
+    }
+
+    public PermsTreeSelect(SysMenu menu)
+    {
+        this.key = menu.getMenuId();
+        this.title = menu.getMenuName();
+        this.component = menu.getComponent();
+        this.url = menu.getMenuUrl();
+        this.perms = menu.getPerms();
+        this.icon = menu.getIcon();
+        this.children = menu.getChildren().stream().map(PermsTreeSelect::new).collect(Collectors.toList());
+    }
+}
