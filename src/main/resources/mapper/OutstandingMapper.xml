@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nanyang.academy.mapper.OutstandingMapper">
+
+	<select id="getOutstandingListPage" resultType="com.nanyang.academy.entity.dto.OutstandingVo">
+		select t.*,u.nick_name create_name
+		from outstanding t
+				 left join sys_user u on t.create_by = u.user_id
+			${ew.customSqlSegment}
+	</select>
+	<select id="getLast" resultType="com.nanyang.academy.entity.Outstanding">
+		select t.*,u.nick_name create_name
+		from outstanding t
+				 left join sys_user u on t.create_by = u.user_id
+			where t.id &lt; #{id}
+		order by `id` desc
+			limit 1
+	</select>
+
+	<select id="getNext" resultType="com.nanyang.academy.entity.Outstanding">
+		select t.*,u.nick_name create_name
+		from outstanding t
+				 left join sys_user u on t.create_by = u.user_id
+		where t.id &gt; #{id}
+		order by `id`
+		limit 1
+	</select>
+</mapper>

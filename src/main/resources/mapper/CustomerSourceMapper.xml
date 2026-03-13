@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nanyang.academy.mapper.CustomerSourceMapper">
+	<select id="getSourceListPage" resultType="com.nanyang.academy.entity.dto.CustomerSourceVo">
+		select t.*,c.nick_name create_name from customer_source t
+		left join sys_user c on t.create_user = c.user_id
+			${ew.customSqlSegment}
+	</select>
+
+	<!--<select id="getVisitNumStatistics" resultType="com.nanyang.academy.entity.CustomerSource">
+		select name,visit_num from customer_source
+	</select>-->
+
+</mapper>

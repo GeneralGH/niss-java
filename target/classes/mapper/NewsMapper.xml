@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nanyang.academy.mapper.NewsMapper">
+	<select id="getNewsListPage" resultType="com.nanyang.academy.entity.dto.NewsVo">
+		select t.*,u.nick_name create_name
+		from news t
+				 left join sys_user u on t.create_by = u.user_id
+			${ew.customSqlSegment}
+	</select>
+
+	<select id="getLast" resultType="com.nanyang.academy.entity.News" parameterType="com.nanyang.academy.entity.News">
+		select t.*
+		from news t
+			where t.id &lt; #{id} and type = #{type}
+			order by t.id desc
+			limit 1
+	</select>
+
+	<select id="getNext" resultType="com.nanyang.academy.entity.News" parameterType="com.nanyang.academy.entity.News">
+		select t.*
+		from news t
+		where t.id &gt; #{id} and type = #{type}
+		order by t.id
+		limit 1
+	</select>
+
+</mapper>
