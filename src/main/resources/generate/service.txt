@@ -1,8 +1,0 @@
-package {servicePackageName};
-
-import {beanPackageName}.{beanName};
-import com.baomidou.mybatisplus.extension.service.IService;
-
-public interface {serviceName} extends IService<{beanName}> {
-    {beanName} update({beanName} {beanParamName});
-}
