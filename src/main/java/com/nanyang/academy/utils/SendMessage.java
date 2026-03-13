@@ -20,8 +20,8 @@ public class SendMessage {
     /**
      * 需要修改
      */
-    public final static String ACCESS_KEY_ID = "LTAI5t9385LTtX67xYnNy8PH";
-    public final static String ACCESS_KEY_SECRET = "fyLTdgpHALNpxSBuVLqXXiq1HFo2go";
+    public final static String ACCESS_KEY_ID = "";
+    public final static String ACCESS_KEY_SECRET = "";
     /**
      * 短信API产品名称（短信产品名固定，无需修改）
      */
