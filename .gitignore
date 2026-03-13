@@ -1,0 +1,98 @@
+# ========================== 通用Java/Maven忽略 ==========================
+# 编译生成的class文件
+*.class
+
+# Maven构建目录（包含编译产物、打包产物）
+target/
+
+# IDEA配置文件（如果用Eclipse/VSCode，补充对应规则）
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+*.idea/workspace.xml
+*.idea/tasks.xml
+*.idea/gradle.xml
+*.idea/dictionaries
+*.idea/libraries
+*.idea/*.iml
+*.idea/modules.xml
+.idea/misc.xml
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Eclipse配置文件
+.classpath
+.project
+.settings/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.factorypath
+
+# ========================== SpringBoot项目专属 ==========================
+# 配置文件（本地开发环境的敏感配置，不上库）
+src/main/resources/application-dev.yml
+src/main/resources/application-dev.properties
+src/main/resources/application-local.yml
+src/main/resources/application-local.properties
+# 如果有自定义的配置文件（如数据库密码、Redis地址），也添加进来
+src/main/resources/*.yml.local
+src/main/resources/*.properties.local
+
+# 日志文件（运行时生成的日志，不上库）
+logs/
+*.log
+*.log.*
+logs/
+temp/
+
+# ========================== 其他通用忽略 ==========================
+# 操作系统临时文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.pid
+*.seed
+*.pid.lock
+
+# Maven本地仓库缓存（非必要，但若有本地缓存文件可忽略）
+.mvn/
+mvnw
+mvnw.cmd
+
+# 打包产物（除了target，额外的包文件）
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Redis/MySQL本地测试数据（若有）
+*.rdb
+*.dump
+data/
+
+# 测试报告
+surefire-reports/
+failsafe-reports/
+
+# 自定义忽略（根据项目实际情况补充）
+# 比如本地上传的文件目录
+upload/
+download/
