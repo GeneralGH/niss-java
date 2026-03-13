@@ -26,9 +26,9 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/nanyang?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
+    url: jdbc:mysql://192.168.134.144:3306/nanyang?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
     username: root
-    password: 123456
+    password: root
     type: com.alibaba.druid.pool.DruidDataSource #设置连接池类型为 druid
     #Druid配置 对应DruidDataSource中的setting方法。
     druid: #设置Druid连接池的自定义配置。然后 DruidDataSourceAutoConfigure 会自动化配置 Druid 连接池。
@@ -72,7 +72,7 @@ spring:
   redis:
     cluster:
       max-redirects:
-    host: 127.0.0.1
+    host: 192.168.134.144
     port: 6379
     timeout: 10000
     jedis:

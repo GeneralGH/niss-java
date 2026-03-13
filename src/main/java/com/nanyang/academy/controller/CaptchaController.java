@@ -125,12 +125,13 @@ public class CaptchaController extends BaseController{
             throw new CustomException("手机号格式不正确");
         }
         String code = RandomUtil.getNumber();
-        boolean flg = SendMessage.sendMessage(phone, code);
+        throw new CustomException("短信发送失败");
+        /*boolean flg = SendMessage.sendMessage(phone, code);*/
         //SendMessage.sendMessage(userTel, code);
-        if (!flg) {
+        /*if (!flg) {
             throw new CustomException("短信发送失败");
         }
         redisCache.setCacheObject(Constant.PREFIX_VERIFY_CODE + phone, code, Constant.PREFIX_CODE_TIME,TimeUnit.SECONDS);
-        return new ResultEntity(org.springframework.http.HttpStatus.OK.value(), "获取成功");
+        return new ResultEntity(org.springframework.http.HttpStatus.OK.value(), "获取成功");*/
     }
 }
