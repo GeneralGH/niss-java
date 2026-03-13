@@ -13,7 +13,6 @@ import com.nanyang.academy.utils.msgVerify.PhoneFormatCheckUtils;
 import com.nanyang.academy.utils.msgVerify.RandomUtil;
 import com.nanyang.academy.utils.uuid.IdUtil;
 import com.nanyang.academy.utils.RedisCache;
-import com.nanyang.academy.utils.SendMessage;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
