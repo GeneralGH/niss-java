@@ -27,6 +27,19 @@ public class NewsServiceImpl extends ServiceImpl<NewsMapper, News> implements Ne
         Page<NewsVo> page = new Page<>(param.getCurrent(),param.getSize());
         QueryWrapper<NewsVo> wrapper = new QueryWrapper<>();
         wrapper.eq("t.type",param.getType());
+        if (param.getHighlight() != null) {
+            if (param.getHighlight() == 1) {
+                // 查推荐：必须 =1
+                wrapper.eq("t.highlight", 1);
+            } else {
+                // 查非推荐：=0 或者 IS NULL
+                wrapper.and(w -> w
+                        .eq("t.highlight", 0)
+                        .or()
+                        .isNull("t.highlight")
+                );
+            }
+        }
         if (ObjectUtils.isNotEmpty(param.getLanguage())){
             wrapper.eq("t.language",param.getLanguage());
         }

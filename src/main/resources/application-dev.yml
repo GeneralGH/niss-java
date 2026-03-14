@@ -26,7 +26,7 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.134.144:3306/nanyang?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
+    url: jdbc:mysql://localhost:3306/nanyang?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
     username: root
     password: root
     type: com.alibaba.druid.pool.DruidDataSource #设置连接池类型为 druid

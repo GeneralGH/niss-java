@@ -17,4 +17,6 @@ public class NewsQueryParam extends QueryBaseParam implements Serializable {
     private String title;
     @ApiModelProperty(value = "作者")
     private String author;
+    @ApiModelProperty(value = "推荐")
+    private Integer highlight;
 }

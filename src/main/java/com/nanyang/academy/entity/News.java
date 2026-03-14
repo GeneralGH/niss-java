@@ -36,7 +36,7 @@ public class News implements Serializable {
 	@ApiModelProperty(value = "")
 	private Date updateTime;
 
-	@ApiModelProperty(value = "1学院信息  2校友活动")
+	@ApiModelProperty(value = "1学院信息  2校友活动  3加入他们 成为他们")
 	private Integer type;
 	@ApiModelProperty(value = "语言")
 	private Integer language;
@@ -54,4 +54,7 @@ public class News implements Serializable {
 
 	@ApiModelProperty(value = "排序")
 	private Integer sort;
+
+	@ApiModelProperty(value = "推荐")
+	private Integer highlight;
 }
