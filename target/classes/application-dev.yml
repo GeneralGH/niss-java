@@ -72,7 +72,7 @@ spring:
   redis:
     cluster:
       max-redirects:
-    host: 192.168.134.144
+    host: 192.168.200.130
     port: 6379
     timeout: 10000
     jedis:
@@ -92,7 +92,8 @@ hy:
   # 名称
   name: hy
   #域名
-  realmName: http://192.168.0.75:8070
+#  realmName: http://192.168.0.75:8070
+  realmName: http://localhost:8070
   # 版本
   version: V1.0.0
   # 版权年份
