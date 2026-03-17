@@ -72,7 +72,8 @@ spring:
   redis:
     cluster:
       max-redirects:
-    host: 192.168.200.130
+#    host: 192.168.200.130
+    host: 192.168.134.144
     port: 6379
     timeout: 10000
     jedis:
@@ -86,6 +87,7 @@ mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: classpath:/mapper/*.xml
+  type-aliases-package: com.nanyang.academy.entity
 
 
 hy:
