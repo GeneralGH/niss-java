@@ -39,15 +39,15 @@ public class ActivityNoticeController extends BaseController {
     // 新增
     @ApiOperation("新增")
     @PostMapping("/add")
-    public ResultEntity<Boolean> add(@RequestBody ActivityNotice projectAdmission) {
-        return ResultEntity.getOkResult(activityNoticeService.save(projectAdmission));
+    public ResultEntity<Boolean> add(@RequestBody ActivityNotice activityNotice) {
+        return ResultEntity.getOkResult(activityNoticeService.save(activityNotice));
     }
 
     // 修改
     @ApiOperation("修改")
     @PostMapping("/update")
-    public ResultEntity<Boolean> update(@RequestBody ActivityNotice projectAdmission) {
-        return ResultEntity.getOkResult(activityNoticeService.updateById(projectAdmission));
+    public ResultEntity<Boolean> update(@RequestBody ActivityNotice activityNotice) {
+        return ResultEntity.getOkResult(activityNoticeService.updateById(activityNotice));
     }
 
     // 删除
