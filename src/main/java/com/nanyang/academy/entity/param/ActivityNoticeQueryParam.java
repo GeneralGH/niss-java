@@ -11,7 +11,7 @@ import java.io.Serializable;
  */
 @Data
 @ApiModel(value="{ActivityNoticeQueryParam}", description="ActivityNotice查询参数")
-public class ActivityNoticeQueryParam implements Serializable {
+public class ActivityNoticeQueryParam extends QueryBaseParam implements Serializable {
     @ApiModelProperty(value = "标题")
     private String title;
 }

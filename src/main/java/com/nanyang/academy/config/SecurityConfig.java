@@ -126,7 +126,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         "/outstanding/getLastAndNext/*",
                         "/api/news/getLastAndNext/*",
                         "/api/customerSource/addVisitNum/*",
-                        "/api/project/admission/getListPage"
+                        "/api/project/admission/getListPage",
+                        "/api/activity-notice/getListPage"
                 ).permitAll()
                 .antMatchers("/swagger-ui.html").anonymous()
                 .antMatchers("/swagger-resources/**").anonymous()

@@ -6,6 +6,10 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.nanyang.academy.entity.dto.ActivityNoticeVo;
 import com.nanyang.academy.entity.param.ActivityNoticeQueryParam;
 
+import java.util.List;
+
 public interface ActivityNoticeService extends IService<ActivityNotice> {
-    IPage<ActivityNoticeVo> getActivityNoticeListPage(ActivityNoticeQueryParam param);
+
+    List<ActivityNoticeVo> getActivityNoticeListPage(ActivityNoticeQueryParam param);
+
 }

@@ -8,9 +8,11 @@ import com.nanyang.academy.entity.param.ActivityNoticeQueryParam;
 import com.nanyang.academy.service.ActivityNoticeService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * <p>
@@ -24,12 +26,13 @@ import javax.annotation.Resource;
 @RequestMapping("/api/activity-notice")
 @Api(tags = "活动预告")
 public class ActivityNoticeController extends BaseController {
-    @Resource
+
+    @Autowired
     private ActivityNoticeService activityNoticeService;
 
     @ApiOperation("分页列表")
     @PostMapping("/getListPage")
-    public ResultEntity<IPage<ActivityNoticeVo>> getListPage(@RequestBody ActivityNoticeQueryParam param) {
+    public ResultEntity<List<ActivityNoticeVo>> getListPage(@RequestBody ActivityNoticeQueryParam param) {
         return ResultEntity.getOkResult(activityNoticeService.getActivityNoticeListPage(param));
     }
 
