@@ -1,7 +1,10 @@
 package com.nanyang.academy.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.nanyang.academy.entity.ActivityNotice;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.nanyang.academy.entity.dto.ProjectAdmissionVo;
+import com.nanyang.academy.entity.param.ProjectAdmissionQueryParam;
 
 /**
  * <p>
@@ -13,4 +16,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IActivityNoticeService extends IService<ActivityNotice> {
 
+    IPage<ProjectAdmissionVo> getProjectAdmissionListPage(ProjectAdmissionQueryParam param);
 }

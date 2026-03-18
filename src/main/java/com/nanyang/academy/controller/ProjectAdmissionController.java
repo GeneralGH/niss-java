@@ -14,7 +14,7 @@ import javax.annotation.Resource;
 @RestController
 @RequestMapping("/api/project/admission")
 @Api(tags = "项目与招生")
-public class ProjectAdmissionController {
+public class ProjectAdmissionController extends BaseController {
 
     @Resource
     private ProjectAdmissionService projectAdmissionService;
