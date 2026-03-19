@@ -10,6 +10,6 @@ import java.util.List;
 
 public interface ActivityNoticeService extends IService<ActivityNotice> {
 
-    List<ActivityNoticeVo> getActivityNoticeListPage(ActivityNoticeQueryParam param);
+    IPage<ActivityNoticeVo> getActivityNoticeListPage(ActivityNoticeQueryParam param);
 
 }

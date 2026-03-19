@@ -32,7 +32,7 @@ public class ActivityNoticeController extends BaseController {
 
     @ApiOperation("分页列表")
     @PostMapping("/getListPage")
-    public ResultEntity<List<ActivityNoticeVo>> getListPage(@RequestBody ActivityNoticeQueryParam param) {
+    public ResultEntity<IPage<ActivityNoticeVo>> getListPage(@RequestBody ActivityNoticeQueryParam param) {
         return ResultEntity.getOkResult(activityNoticeService.getActivityNoticeListPage(param));
     }
 

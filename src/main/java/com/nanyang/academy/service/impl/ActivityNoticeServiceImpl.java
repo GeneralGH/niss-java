@@ -30,7 +30,7 @@ public class ActivityNoticeServiceImpl extends ServiceImpl<ActivityNoticeMapper,
     private ActivityNoticeMapper activityNoticeMapper;
     QueryWrapper<ActivityNoticeVo> wrapper = new QueryWrapper<>();
 
-    public List<ActivityNoticeVo> getActivityNoticeListPage(ActivityNoticeQueryParam param){
+    public IPage<ActivityNoticeVo> getActivityNoticeListPage(ActivityNoticeQueryParam param){
         Page<ActivityNoticeVo> page = new Page<>(param.getCurrent(), param.getSize());
         return activityNoticeMapper.getActivityNoticePage(page, wrapper);
     }

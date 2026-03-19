@@ -21,5 +21,5 @@ import java.util.List;
  */
 @Mapper
 public interface ActivityNoticeMapper extends BaseMapper<ActivityNotice> {
-    List<ActivityNoticeVo> getActivityNoticePage(Page<ActivityNoticeVo> page, @Param(Constants.WRAPPER) QueryWrapper<ActivityNoticeVo> wrapper);
+    IPage<ActivityNoticeVo> getActivityNoticePage(Page<ActivityNoticeVo> page, @Param(Constants.WRAPPER) QueryWrapper<ActivityNoticeVo> wrapper);
 }
