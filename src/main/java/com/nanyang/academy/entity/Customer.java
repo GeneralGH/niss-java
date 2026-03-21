@@ -55,5 +55,6 @@ public class Customer implements Serializable {
 
 	@ApiModelProperty(value = "咨询项目")
 	private String project;
-
+	@ApiModelProperty(value = "工作年限")
+	private String yearsWorking;
 }
