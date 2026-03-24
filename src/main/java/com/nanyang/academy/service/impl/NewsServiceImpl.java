@@ -50,7 +50,7 @@ public class NewsServiceImpl extends ServiceImpl<NewsMapper, News> implements Ne
             //wrapper.eq("t.author",param.getAuthor());
             wrapper.and(w->{w.like("t.author",param.getAuthor()).or().like("t.author_en",param.getAuthor());});
         }
-        wrapper.orderByAsc("t.sort");
+        wrapper.orderByDesc("t.sort");
         IPage<NewsVo> res = newsMapper.getNewsListPage(page,wrapper);
         return res;
     }

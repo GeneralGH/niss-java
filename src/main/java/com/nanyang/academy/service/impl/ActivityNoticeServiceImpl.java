@@ -28,10 +28,11 @@ import java.util.List;
 public class ActivityNoticeServiceImpl extends ServiceImpl<ActivityNoticeMapper, ActivityNotice> implements ActivityNoticeService {
     @Autowired
     private ActivityNoticeMapper activityNoticeMapper;
-    QueryWrapper<ActivityNoticeVo> wrapper = new QueryWrapper<>();
 
-    public IPage<ActivityNoticeVo> getActivityNoticeListPage(ActivityNoticeQueryParam param){
-        Page<ActivityNoticeVo> page = new Page<>(param.getCurrent(), param.getSize());
+    public IPage<ActivityNotice> getActivityNoticeListPage(ActivityNoticeQueryParam param){
+        Page<ActivityNotice> page = new Page<>(param.getCurrent(), param.getSize());
+        QueryWrapper<ActivityNotice> wrapper = new QueryWrapper<>();
+        wrapper.orderByDesc("create_time");
         return activityNoticeMapper.getActivityNoticePage(page, wrapper);
     }
 
