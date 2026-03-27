@@ -25,8 +25,8 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/nanyang?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
-    username: root
+    url: jdbc:mysql://localhost:3306/nanyang?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
+    username: nissroot
     password: niss@root
     type: com.alibaba.druid.pool.DruidDataSource #设置连接池类型为 druid
     #Druid配置 对应DruidDataSource中的setting方法。
