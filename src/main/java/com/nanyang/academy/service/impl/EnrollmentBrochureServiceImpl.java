@@ -31,6 +31,7 @@ public class EnrollmentBrochureServiceImpl extends ServiceImpl<EnrollmentBrochur
 
     public List<EnrollmentBrochure> getEnrollmentBrochureListPage(EnrollmentBrochureQueryParam param){
         Page<EnrollmentBrochure> page = new Page<>(param.getCurrent(), param.getSize());
+        wrapper.orderByDesc("create_time");
         return enrollmentBrochureMapper.getEnrollmentBrochurePage(page, wrapper);
     }
 }

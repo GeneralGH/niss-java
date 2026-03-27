@@ -5,5 +5,6 @@
     <select id="getEnrollmentBrochurePage" resultType="com.nanyang.academy.entity.EnrollmentBrochure">
         select t.*
         from enrollment_brochure t
+        ${ew.customSqlSegment}
     </select>
 </mapper>
