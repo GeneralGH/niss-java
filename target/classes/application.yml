@@ -3,7 +3,7 @@ spring:
     # 国际化资源文件路径
     basename: i18n/messages
   profiles:
-    active: dev
+    active: test
     #测试环境|test  开发环境|dev  正式环境|prod
   mvc:
     pathmatch:

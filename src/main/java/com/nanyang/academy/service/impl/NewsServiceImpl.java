@@ -40,6 +40,9 @@ public class NewsServiceImpl extends ServiceImpl<NewsMapper, News> implements Ne
                 );
             }
         }
+        if (param.getAlumniType() != null) {
+            wrapper.eq("t.alumni_type", param.getAlumniType());
+        }
         if (ObjectUtils.isNotEmpty(param.getLanguage())){
             wrapper.eq("t.language",param.getLanguage());
         }

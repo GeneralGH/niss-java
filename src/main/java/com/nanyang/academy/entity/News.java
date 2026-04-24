@@ -57,4 +57,7 @@ public class News implements Serializable {
 
 	@ApiModelProperty(value = "推荐")
 	private Integer highlight;
+
+	@ApiModelProperty(value = "校友动态类型 1：MBA、2：DBA、3：DPAcc\t")
+	private Integer alumniType;
 }
