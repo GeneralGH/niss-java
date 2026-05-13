@@ -125,10 +125,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         "/api/sysDictData/type/*",
                         "/outstanding/getLastAndNext/*",
                         "/api/news/getLastAndNext/*",
+                        "/api/news/getLastAndNext",
                         "/api/customerSource/addVisitNum/*",
                         "/api/project/admission/getListPage",
                         "/api/activity-notice/getListPage",
-                        "/api/enrollment-brochure/getListPage"
+                        "/api/enrollment-brochure/getListPage",
+                        "/api/enrollment-brochure/get/*"
                 ).permitAll()
                 .antMatchers("/swagger-ui.html").anonymous()
                 .antMatchers("/swagger-resources/**").anonymous()
