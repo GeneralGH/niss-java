@@ -34,6 +34,10 @@ public class CustomerServiceImpl extends ServiceImpl<CustomerMapper, Customer> i
             wrapper.like("project",param.getProject());
         if (ObjectUtils.isNotEmpty(param.getLanguage()))
             wrapper.eq("language",param.getLanguage());
+
+        // 按创建时间倒序排列
+        wrapper.orderByDesc("create_time");
+
         IPage<Customer> res = customerMapper.selectPage(page,wrapper);
         return res;
     }
