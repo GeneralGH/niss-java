@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/news")
@@ -79,5 +80,11 @@ public class NewsController extends BaseController{
 
         newsService.editSort(param);
         return ResultEntity.getOkResult();
+    }
+
+    @GetMapping("/getAllNewsIds")
+    @ApiOperation(value = "获取所有文章ID")
+    public ResultEntity<List<Long>> getAllNewsIds() {
+        return ResultEntity.getOkResult(newsService.getAllNewsIds());
     }
 }

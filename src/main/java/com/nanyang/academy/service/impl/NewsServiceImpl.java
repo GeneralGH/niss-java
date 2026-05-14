@@ -13,6 +13,7 @@ import com.nanyang.academy.entity.param.NewsQueryParam;
 import com.nanyang.academy.entity.param.SortChangeParam;
 import com.nanyang.academy.mapper.NewsMapper;
 import com.nanyang.academy.service.NewsService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -84,5 +85,10 @@ public class NewsServiceImpl extends ServiceImpl<NewsMapper, News> implements Ne
     public Integer getLastSortBytype(Integer type) {
         Integer sort = newsMapper.getLastSort(type);
         return sort != null?sort:0;
+    }
+
+    @Override
+    public List<Long> getAllNewsIds() {
+        return newsMapper.getAllNewsIds();
     }
 }

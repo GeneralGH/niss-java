@@ -11,6 +11,8 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 /**
  * <p>
  * 用户表 Mapper 接口
@@ -29,4 +31,7 @@ public interface NewsMapper extends BaseMapper<News> {
 
     @Select("select sort from news where type = #{type} order by sort desc limit 1")
     Integer getLastSort(@Param("type") Integer type);
+
+    @Select("select id from news")
+    List<Long> getAllNewsIds();
 }

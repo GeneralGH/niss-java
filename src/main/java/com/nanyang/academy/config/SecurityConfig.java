@@ -126,6 +126,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         "/outstanding/getLastAndNext/*",
                         "/api/news/getLastAndNext/*",
                         "/api/news/getLastAndNext",
+                        "/api/news/getAllNewsIds",
                         "/api/customerSource/addVisitNum/*",
                         "/api/project/admission/getListPage",
                         "/api/activity-notice/getListPage",

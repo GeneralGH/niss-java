@@ -8,6 +8,8 @@ import com.nanyang.academy.entity.dto.NewsVo;
 import com.nanyang.academy.entity.param.NewsQueryParam;
 import com.nanyang.academy.entity.param.SortChangeParam;
 
+import java.util.List;
+
 public interface NewsService extends IService<News> {
     IPage<NewsVo> getNewsListPage(NewsQueryParam param);
 
@@ -17,5 +19,5 @@ public interface NewsService extends IService<News> {
 
     Integer getLastSortBytype(Integer type);
 
-
+    List<Long> getAllNewsIds();
 }
