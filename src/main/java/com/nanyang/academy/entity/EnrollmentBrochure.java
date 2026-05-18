@@ -42,6 +42,12 @@ public class EnrollmentBrochure implements Serializable {
       @ApiModelProperty("文件（英文）地址")
       private String filePathEn;
 
+      @ApiModelProperty("内容")
+      private String content;
+
+      @ApiModelProperty("内容英文")
+      private String contentEn;
+
       @ApiModelProperty("备注")
       private String remark;
 
