@@ -17,7 +17,7 @@ public interface NewsService extends IService<News> {
 
     void editSort(SortChangeParam param);
 
-    Integer getLastSortBytype(Integer type);
+Integer getLastSortBytype(Integer type);
 
     List<Long> getAllNewsIds();
 }

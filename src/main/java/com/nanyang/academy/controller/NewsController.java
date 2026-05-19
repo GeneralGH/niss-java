@@ -81,8 +81,7 @@ public class NewsController extends BaseController{
         newsService.editSort(param);
         return ResultEntity.getOkResult();
     }
-
-    @GetMapping("/getAllNewsIds")
+@GetMapping("/getAllNewsIds")
     @ApiOperation(value = "获取所有文章ID")
     public ResultEntity<List<Long>> getAllNewsIds() {
         return ResultEntity.getOkResult(newsService.getAllNewsIds());
