@@ -60,4 +60,25 @@ public class News implements Serializable {
 
 	@ApiModelProperty(value = "校友动态类型 1：MBA、2：DBA、3：DPAcc\t")
 	private Integer alumniType;
+
+	@ApiModelProperty(value = "SEO标题")
+	private String seoTitle;
+
+	@ApiModelProperty(value = "SEO标题-英文")
+	private String seoTitleEn;
+
+	@ApiModelProperty(value = "SEO描述")
+	private String seoDescription;
+
+	@ApiModelProperty(value = "SEO描述-英文")
+	private String seoDescriptionEn;
+
+	@ApiModelProperty(value = "SEO关键词")
+	private String seoKeywords;
+
+	@ApiModelProperty(value = "SEO关键词-英文")
+	private String seoKeywordsEn;
+
+	@ApiModelProperty(value = "社交分享图")
+	private String ogImage;
 }

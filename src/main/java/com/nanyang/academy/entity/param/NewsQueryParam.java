@@ -21,4 +21,6 @@ public class NewsQueryParam extends QueryBaseParam implements Serializable {
     private Integer highlight;
     @ApiModelProperty(value = "校友动态类型")
     private Integer alumniType;
+    @ApiModelProperty(value = "内容关键词")
+    private String content;
 }
